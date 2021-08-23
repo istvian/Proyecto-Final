@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +18,14 @@
 </head>
 
 <body class="body">
+    <img src="img/bg.jpg" class="body__bg" alt="En rojo, Red hot chili peppers tocando en vivo">
     <header class="header">
-        <nav class="nav">
-            <div class="nav__info">
-                <a href="index.html" class="nav__logo"><img src="img/logo-white.png" alt="Logo de la banda RCHP" style="height: 50px;"></a>
-                <h1 class="nav__title">Red Hot Chili Peppers</h1>
+        <nav class="nav animate__animated animate__fadeInDown">
+            <div class="nav__info ">
+                <a href="index.html" class="nav__logo"><img src="img/logo-white.png" alt="Logo de la banda RCHP"></a>
+                <a href="index.html">
+                    <h1 class="nav__title">Red Hot Chili Peppers</h1>
+                </a>
             </div>
             <ul class="nav__links">
                 <li>
@@ -41,16 +45,63 @@
                 </li>
             </ul>
         </nav>
+        <div class="hero">
+            <h2 class="hero__title">Bienvenido al Fansite de Chile</h2>
+            <h3 class="hero__subtitle">Aquí encontraras las últimas noticias de la mejor banda de la historia</h3>
+            <div class="news">
+                <h4 class="news__title">¿Nuevo disco este verano?</h4>
+                <p class="news__text">Desde que regreso John Frusciante a finales de 2019 todos esperamos un nuevo disco, un seguidor le pregunto al peluquero de Frusciante y este respondio...</p>
+                <img src="img/news-img.jpg" class="news__img" alt="">
+                <p class="news__date">Fecha de noticia: 01-06-2021</p>
+                <a class="news__link" target="_BLANK" href="https://mariskalrock.com/actualidad/nuevo-disco-de-red-hot-chili-peppers-este-verano/">Ve la noticia completa aquí</a>
+            </div>
+            <div class="news">
+                <h4 class="news__title">"Regresaremos y será genial", promete Chad Smith a los fanáticos de Red Hot Chili Peppers</h4>
+                <p class="news__text">El baterista de Red Hot Chili Peppers, Chad Smith, dice que el cuarteto californiano tiene «mucha música nueva» escrita para la continuación de su álbum de 2016 The Getaway, y promete «volveremos y será genial»....</p>
+                <img src="img/news-img-2.jpg" class="news__img" alt="">
+                <p class="news__date">Fecha de noticia: 01-06-2021</p>
+                <a class="news__link" target="_BLANK" href="https://www.ezanime.net/regresaremos-y-sera-genial-promete-chad-smith-a-los-fanaticos-de-red-hot-chili-peppers/">Ve la noticia completa aquí</a>
+            </div>
+        </div>
     </header>
     <section>
         <article>
 
         </article>
     </section>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__contact">
+                <h4 class="contact__title">Contacto</h4>
+                <h5 class="contact__info">Calle falsa #1234</h5>
+                <h5 class="contact__info">Santiago, Chile</h5>
+                <h5 class="contact__info">Región Metropolitana</h5>
+                <h5 class="contact__info">Teléfono: 02-11223344</h5>
+                <h5 class="contact__info">Celular: +56 9 99887766</h5>
+            </div>
+            <div class="footer__social">
+                <h4 class="social__title">Nuestras redes sociales</h4>
+                <div class="social__imgs">
+                    <a class="social__link" href="https://facebook.com"><img class="social__img" src="img/icon_facebook.png" alt="Icono de Facebook"></a>
+                    <a class="social__link" href="https://twitter.com"><img class="social__img" src="img/icon_instagram.png" alt="Icono de Instagram"></a>
+                    <a class="social__link" href="https://instagram.com"><img class="social__img" src="img/icon_twitter.png" alt="Icono de Twitter"></a>
+                    <a class="social__link" href="https://whatsapp.com"><img class="social__img" src="img/icon_whatsapp.png" alt="Icono de Whatsapp"></a>
+                </div>
+            </div>
+            <form class="footer__form" action="">
+                <label class="form__label" for="email">Newsletter</label>
+                <div class="form__input">
+                    <input class="form__email" type="email" name="email" id="email" placeholder="mail@example.com">
+                    <button type="submit" class="form__btn">Ok</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer__copy">
+            <h5 class="copy__info">© 2021 Made by Esteban Rojas ♥</h5>
+            <h5 class="copy__info">Coderhouse Final Project</h5>
+        </div>
     </footer>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj " crossorigin="anonymous "></script> -->
 </body>
 
 </html>

@@ -388,7 +388,7 @@ button::-moz-focus-inner {
       padding: 0.5rem; }
     .member .member__container .member__img {
       grid-area: img;
-      width: 22vw;
+      width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 0px 25px 25px 0px; }
@@ -407,6 +407,12 @@ button::-moz-focus-inner {
       font-size: 1.8rem;
       padding: 2rem;
       text-align: center; }
+
+@media (max-width: 800px) {
+  .member .member__container {
+    grid-template-areas: "img img" "titulo date" "content content"; }
+    .member .member__container .member__img {
+      border-radius: 25px 25px 0px 0px; } }
 
 .body {
   background: #1E1E1E; }
@@ -465,44 +471,7 @@ button::-moz-focus-inner {
       grid-area: media; }
 
 @media (max-width: 800px) {
-  .article {
-    display: flex;
-    flex-flow: column-reverse wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 1rem; }
-    .article .album {
-      background: #111111;
-      display: grid;
-      grid-template-areas: "img img" "title title" "detail detail" "media media";
-      max-width: 1000px;
-      height: fit-content;
-      grid-template-columns: 2fr 4fr;
-      border-radius: 25px 25px 25px 25px;
-      margin: 2rem 0;
-      border: #ff0b4c solid 2px; }
-      .article .album .album__title {
-        grid-area: title;
-        color: #FFFFFF;
-        font-family: "Urbanist", sans-serif;
-        text-align: center;
-        font-weight: bold;
-        font-size: 3rem;
-        margin: 1rem 0;
-        padding: 0.5rem; }
-      .article .album .album__img {
-        grid-area: img;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 25px 25px 0px 0px; }
-      .article .album .album__detail {
-        grid-area: detail;
-        color: #FFFFFF;
-        font-family: "Urbanist", sans-serif;
-        font-weight: normal;
-        font-size: 1.8rem;
-        padding: 2rem; }
-      .article .album .album__media {
-        border-radius: 0px 0px 25px 25px;
-        grid-area: media; } }
+  .article .album {
+    grid-template-areas: "img img" "title title" "detail detail" "media media"; }
+    .article .album .album__img {
+      border-radius: 25px 25px 0px 0px; } }

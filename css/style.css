@@ -38,6 +38,10 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+.header {
+  position: sticky;
+  top: 0; }
+
 .nav {
   background: #111111;
   display: flex;
@@ -46,8 +50,6 @@ button::-moz-focus-inner {
   align-items: center;
   padding: 0.5rem 10vw;
   height: fit-content;
-  position: sticky;
-  top: 0;
   border-bottom: #ff0b4c solid 2px;
   z-index: 50; }
   .nav .nav__menu {
@@ -326,20 +328,6 @@ button::-moz-focus-inner {
       background: #ff0b4c;
       color: #111111; }
 
-.body {
-  background: #1E1E1E; }
-  .body .body__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: -10;
-    max-height: 100vh;
-    max-width: 100%;
-    object-fit: cover; }
-
 .hero {
   display: flex;
   flex-flow: column wrap;
@@ -395,9 +383,9 @@ button::-moz-focus-inner {
       font-family: "Urbanist", sans-serif;
       text-align: center;
       font-weight: bold;
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 1rem 0;
-      padding: 1rem; }
+      padding: 0.5rem; }
     .member .member__container .member__img {
       grid-area: img;
       width: 22vw;
@@ -410,13 +398,111 @@ button::-moz-focus-inner {
       font-family: "Urbanist", sans-serif;
       font-weight: normal;
       font-size: 1.8rem;
-      padding: 1rem; }
+      padding: 2rem; }
     .member .member__container .member__date {
       grid-area: date;
       color: #FFFFFF;
       font-family: "Urbanist", sans-serif;
       font-weight: normal;
-      font-size: 2rem;
+      font-size: 1.8rem;
+      padding: 2rem;
+      text-align: center; }
+
+.body {
+  background: #1E1E1E; }
+  .body .body__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -10;
+    max-height: 100vh;
+    max-width: 100%;
+    object-fit: cover; }
+
+.article {
+  display: flex;
+  flex-flow: column-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem; }
+  .article .album {
+    background: #111111;
+    display: grid;
+    grid-template-areas: "img title" "img detail" "media media";
+    max-width: 1000px;
+    height: fit-content;
+    grid-template-columns: 2fr 4fr;
+    border-radius: 25px 25px 25px 25px;
+    margin: 2rem 0;
+    border: #ff0b4c solid 2px; }
+    .article .album .album__title {
+      grid-area: title;
+      color: #FFFFFF;
+      font-family: "Urbanist", sans-serif;
       text-align: center;
-      padding: 1rem 1rem 0.5rem 1rem;
-      height: fit-content; }
+      font-weight: bold;
+      font-size: 3rem;
+      margin: 1rem 0;
+      padding: 0.5rem; }
+    .article .album .album__img {
+      grid-area: img;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 25px 0px 0px 0px; }
+    .article .album .album__detail {
+      grid-area: detail;
+      color: #FFFFFF;
+      font-family: "Urbanist", sans-serif;
+      font-weight: normal;
+      font-size: 1.8rem;
+      padding: 2rem; }
+    .article .album .album__media {
+      border-radius: 0px 0px 25px 25px;
+      grid-area: media; }
+
+@media (max-width: 800px) {
+  .article {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem; }
+    .article .album {
+      background: #111111;
+      display: grid;
+      grid-template-areas: "img img" "title title" "detail detail" "media media";
+      max-width: 1000px;
+      height: fit-content;
+      grid-template-columns: 2fr 4fr;
+      border-radius: 25px 25px 25px 25px;
+      margin: 2rem 0;
+      border: #ff0b4c solid 2px; }
+      .article .album .album__title {
+        grid-area: title;
+        color: #FFFFFF;
+        font-family: "Urbanist", sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 1rem 0;
+        padding: 0.5rem; }
+      .article .album .album__img {
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px 25px 0px 0px; }
+      .article .album .album__detail {
+        grid-area: detail;
+        color: #FFFFFF;
+        font-family: "Urbanist", sans-serif;
+        font-weight: normal;
+        font-size: 1.8rem;
+        padding: 2rem; }
+      .article .album .album__media {
+        border-radius: 0px 0px 25px 25px;
+        grid-area: media; } }

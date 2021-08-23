@@ -115,9 +115,12 @@ button::-moz-focus-inner {
     border-bottom: #ff0b4c solid 2px; } }
 
 @media (max-width: 768px) {
+  .body__bg {
+    display: none; }
   .nav {
     display: flex;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    justify-content: center; }
     .nav .nav__links {
       display: none; }
     .nav .nav__menu {
@@ -126,17 +129,13 @@ button::-moz-focus-inner {
       .nav .nav__menu img {
         height: 4rem; }
     .nav .nav__info .nav__title {
-      color: #FFFFFF;
-      font-family: "Urbanist", sans-serif;
-      font-size: 1.5rem;
       text-transform: uppercase;
-      font-weight: bold;
       padding: 0 1rem;
       transition: border 1s; }
       .nav .nav__info .nav__title:hover {
         border-bottom: #ff0b4c solid 2px; }
   .nav__hamb {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 10;

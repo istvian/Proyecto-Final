@@ -45,7 +45,7 @@ button::-moz-focus-inner {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 10vw;
-  height: 50px;
+  height: fit-content;
   position: sticky;
   top: 0;
   border-bottom: #ff0b4c solid 2px;

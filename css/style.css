@@ -12,7 +12,8 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  overflow-anchor: none; }
+  overflow-anchor: none;
+  font-size: 10px; }
 
 input[type="submit"],
 input[type="reset"],
@@ -594,7 +595,7 @@ button::-moz-focus-inner {
         align-content: center; }
         .main .article .aside .aside__container .aside__item {
           display: flex;
-          flex-flow: column wrap;
+          flex-flow: row wrap;
           margin: 1rem;
           padding: 1rem;
           width: 100%;
@@ -622,9 +623,8 @@ button::-moz-focus-inner {
               cursor: default;
               color: #bbb; }
           .main .article .aside .aside__container .aside__item .aside__img {
-            width: 3rem;
-            height: 100%;
-            margin: auto;
+            width: 50px;
+            height: 50px;
             object-fit: cover; }
 
 @media (max-width: 768px) {

@@ -1,0 +1,21 @@
+@import "variables";
+@import "reset";
+@import "nav";
+@import "mixins";
+@import "footer";
+@import "sections";
+.body {
+    background: #1e1e1e;
+    .body__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: -10;
+        max-height: 100vh;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,169 @@
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.nav {
+    background: $color-black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 10vw;
+    height: fit-content;
+    border-bottom: $color-text-hover solid 2px;
+    z-index: 50;
+    .nav__menu {
+        display: none;
+    }
+    .nav__info {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        .nav__title {
+            color: $color-white;
+            font-family: $font-default;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 0 1rem;
+            transition: border 1s;
+            &:hover {
+                border-bottom: $color-text-hover solid 2px;
+            }
+        }
+        .nav__logo {
+            background: $color-black;
+            border-radius: 50%;
+            transition: background 0.3s, transform 0.5s;
+            transition: transform 1s;
+            &:hover {
+                background: $color-text-hover;
+                transform: scale(105%);
+            }
+            img {
+                height: 4rem;
+            }
+        }
+    }
+    .nav__links li {
+        display: inline;
+        .nav__link {
+            color: $color-white;
+            font-family: $font-default;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            padding: 0.5rem;
+            transition: background color 0.2s;
+            &:hover {
+                background: $color-text-hover;
+                color: $color-black;
+            }
+        }
+        .nav__link--visited {
+            font-weight: normal;
+            color: $color-text-visited;
+            &:hover {
+                background: none;
+                cursor: default;
+                color: $color-text-visited;
+            }
+        }
+    }
+}
+
+.nav__hamb {
+    display: none;
+}
+
+@media (max-width:1024px) {
+    .nav {
+        background: $color-black;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0vw;
+        height: fit-content;
+        position: sticky;
+        top: 0;
+        border-bottom: $color-text-hover solid 2px;
+    }
+}
+
+@media (max-width:768px) {
+    .body__bg {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        .nav__links {
+            display: none;
+        }
+        .nav__menu {
+            margin-right: 1rem;
+            display: block;
+            img {
+                height: 4rem;
+            }
+        }
+        .nav__info {
+            .nav__title {
+                text-transform: uppercase;
+                padding: 0 1rem;
+                transition: border 1s;
+                &:hover {
+                    border-bottom: $color-text-hover solid 2px;
+                }
+            }
+        }
+    }
+    .nav__hamb {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        height: fit-content;
+        width: 50vw;
+        background: $color-black;
+        border-left: $color-text-hover solid 2px;
+        border-bottom: $color-text-hover solid 2px;
+        display: none;
+        flex-flow: column wrap;
+        justify-items: center;
+        align-items: center;
+        padding-top: 5rem;
+        li {
+            margin: 2rem 0;
+            padding: 0 2rem;
+            width: 100%;
+        }
+        .hamb__link {
+            width: 100%;
+            text-align: center;
+            color: $color-white;
+            font-family: $font-default;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: background color 0.2s;
+            padding: 2rem;
+            &:hover {
+                background: $color-text-hover;
+                color: $color-black;
+            }
+        }
+        .hamb__link--visited {
+            font-weight: normal;
+            color: $color-text-visited;
+            &:hover {
+                background: none;
+                cursor: default;
+                color: $color-text-visited;
+            }
+        }
+    }
+}

@@ -1,0 +1,370 @@
+// SECCION DE NOTICIAS
+.news {
+    background: $color-float;
+    display: grid;
+    grid-template-areas: "img titulo" "img content" "img date" "img link";
+    grid-auto-flow: row;
+    max-width: 1000px;
+    height: fit-content;
+    grid-template-columns: 1fr 8fr;
+    border-radius: 25px 25px 25px 25px;
+    margin: 2rem 0;
+    .news__title {
+        grid-area: titulo;
+        color: $color-white;
+        font-family: $font-default;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: left;
+        padding: 1rem;
+    }
+    .news__text {
+        grid-area: content;
+        color: $color-white;
+        font-family: $font-default;
+        font-weight: normal;
+        font-size: 1.8rem;
+        text-align: left;
+        padding: 1rem;
+    }
+    .news__img {
+        grid-area: img;
+        width: 30vw;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px 0px 0px 25px;
+    }
+    .news__date {
+        grid-area: date;
+        color: $color-white;
+        font-family: $font-default;
+        font-weight: normal;
+        font-size: 1.4rem;
+        text-align: left;
+        padding: 1rem 1rem 0.5rem 1rem;
+        height: fit-content;
+    }
+    .news__link {
+        grid-area: link;
+        @include btn;
+        border-radius: 0px 0px 25px 0px;
+    }
+}
+
+// NOTICIAS MEDIA QUERY
+@media (max-width: 800px) {
+    .news {
+        grid-template-areas: "date date""img img" "titulo titulo" "content content" "link link";
+        margin: 2rem 0;
+        grid-template-columns: 4fr 4fr;
+        border-radius: 25px 25px 25px 25px;
+        .news__img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 0px 0px 0px;
+        }
+        .news__date {
+            text-align: center;
+        }
+        .news__link {
+            text-align: center;
+            border-radius: 0px 0px 25px 25px;
+        }
+    }
+}
+
+//SECCION HERO
+.hero {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2vh;
+    padding: 0.5rem 2vw;
+    .hero__title {
+        color: $color-white;
+        font-family: $font-default;
+        text-align: center;
+        font-weight: bold;
+        font-size: 4rem;
+        margin: 1rem 0;
+        padding: 0.5rem;
+    }
+    .hero__subtitle {
+        color: $color-white;
+        font-family: $font-default;
+        font-weight: normal;
+        font-size: 1.8rem;
+        padding: 0.5rem;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+}
+
+// SECCION INTEGRANTES DE LA BANDA
+.member {
+    @include flex-h;
+    align-items: flex-start;
+    margin: 0 1rem;
+    .member__title {
+        color: $color-white;
+        font-family: $font-default;
+        text-align: center;
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 1rem 0;
+        padding: 0.5rem;
+    }
+    .member__container {
+        background: $color-float;
+        display: grid;
+        grid-template-areas: "titulo img" "content img" "date img";
+        grid-auto-flow: row;
+        max-width: 700px;
+        height: fit-content;
+        grid-template-columns: 5fr 2fr;
+        border-radius: 25px 25px 25px 25px;
+        margin: 2rem 2rem;
+        border: $color-text-hover solid 2px;
+        .member__name {
+            grid-area: titulo;
+            @include title;
+        }
+        .member__img {
+            grid-area: img;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0px 25px 25px 0px;
+        }
+        .member__detail {
+            grid-area: content;
+            @include text;
+        }
+        .member__date {
+            grid-area: date;
+            @include text;
+            text-align: center;
+        }
+    }
+}
+
+// INTEGRANTES MEDIA QUERY
+@media (max-width: 800px) {
+    .member {
+        @include flex-v;
+        .member__container {
+            grid-template-areas: "img img" "titulo date" "content content";
+            border-radius: 25px 25px 25px 25px;
+            margin: 2rem 0;
+            border: $color-text-hover solid 2px;
+            .member__img {
+                border-radius: 25px 25px 0px 0px;
+            }
+        }
+    }
+}
+
+// SECCION DISCOGRAFIA
+.section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 1rem;
+    .album {
+        background: $color-black;
+        display: grid;
+        grid-template-areas: "img title" "img detail" "media detail";
+        max-width: 700px;
+        height: fit-content;
+        grid-template-columns: 3fr 5fr;
+        border-radius: 25px 25px 25px 25px;
+        margin: 2rem 2rem;
+        border: $color-text-hover solid 2px;
+        .album__title {
+            grid-area: title;
+            @include title;
+        }
+        .album__img {
+            grid-area: img;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px 0px 0px 0px;
+        }
+        .album__detail {
+            grid-area: detail;
+            @include text;
+        }
+        .album__media {
+            border-radius: 0px 0px 0px 25px;
+            grid-area: media;
+        }
+    }
+}
+
+// SECCION DISCOGRAFIA MOBILE
+@media (max-width: 800px) {
+    .section {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+        .album {
+            background: $color-black;
+            display: grid;
+            grid-template-areas: "img img" "title title" "detail detail" "media media";
+            max-width: 1000px;
+            height: fit-content;
+            grid-template-columns: 2fr 4fr;
+            border-radius: 25px 25px 25px 25px;
+            margin: 2rem 0;
+            border: $color-text-hover solid 2px;
+            .album__title {
+                grid-area: title;
+                @include title;
+            }
+            .album__img {
+                grid-area: img;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 25px 25px 0px 0px;
+            }
+            .album__detail {
+                grid-area: detail;
+                @include text;
+            }
+            .album__media {
+                border-radius: 0px 0px 25px 25px;
+                grid-area: media;
+            }
+        }
+    }
+}
+
+// PLANTILLA PAGINA LETRAS
+.main {
+    @include flex-v;
+    height: fit-content;
+    .article {
+        display: grid;
+        grid-template-areas: "aside letra";
+        grid-template-columns: 1fr 6fr;
+        height: fit-content;
+        max-width: 1200px;
+        .lyrics {
+            border-radius: 0px 25px 25px 0px;
+            border-top: $color-text-hover solid 2px;
+            border-right: $color-text-hover solid 2px;
+            border-bottom: $color-text-hover solid 2px;
+            background: $color-black;
+            grid-area: letra;
+            @include flex-h;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            .lyrics__box {
+                @include flex-v;
+                max-width: 25rem;
+                .lyrics__title {
+                    @include title;
+                }
+                .lyrics__content {
+                    @include text;
+                    text-align: center;
+                }
+            }
+            .lyrics__media {
+                border-radius: 0px 25px 0px 0px;
+            }
+        }
+        .aside {
+            grid-area: aside;
+            background: $color-float;
+            @include flex-v;
+            margin: 0;
+            padding: 0;
+            justify-content: start;
+            align-content: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px 0px 0px 25px;
+            border-top: $color-text-hover solid 2px;
+            border-left: $color-text-hover solid 2px;
+            border-bottom: $color-text-hover solid 2px;
+            .aside__title {
+                @include text;
+                text-align: center;
+            }
+            .aside__container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-content: center;
+                .aside__item {
+                    display: flex;
+                    flex-flow: row wrap;
+                    margin: 1rem;
+                    padding: 1rem;
+                    width: 100%;
+                    height: fit-content;
+                    justify-content: center;
+                    align-content: center;
+                    .aside__link {
+                        @include link;
+                        margin: 1rem;
+                        text-align: center;
+                    }
+                    .aside__link--visited {
+                        font-weight: normal;
+                        color: $color-text-visited;
+                        &:hover {
+                            background: none;
+                            cursor: default;
+                            color: $color-text-visited;
+                        }
+                    }
+                    .aside__img {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PLANTILLA PAGINA LETRAS MOBILE
+@media (max-width: 800px) {
+    .main {
+        .article {
+            grid-template-areas: "aside aside" "letra letra";
+            .lyrics {
+                border-radius: 0px 0px 25px 25px;
+                border-left: $color-text-hover solid 2px;
+                border-right: $color-text-hover solid 2px;
+                border-bottom: $color-text-hover solid 2px;
+                .lyrics__media {
+                    border-radius: 0px 0px 0px 0px;
+                }
+            }
+            .aside {
+                border-radius: 25px 25px 0px 0px;
+                border-top: $color-text-hover solid 2px;
+                border-left: $color-text-hover solid 2px;
+                border-right: $color-text-hover solid 2px;
+                .aside__container {
+                    .aside__item {
+                        padding: .5rem;
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}

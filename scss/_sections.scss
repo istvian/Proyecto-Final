@@ -99,6 +99,10 @@
         margin-bottom: 2vh;
         text-align: center;
     }
+    .hero__link {
+        @include btn;
+        margin: 20rem 0;
+    }
 }
 
 // SECCION INTEGRANTES DE LA BANDA

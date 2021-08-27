@@ -3,8 +3,8 @@
 
 ### Este proyecto fue realizado como proyecto final para el curso de desarrollo web de CoderHouse.
 
-![Página principal Mobile](https://github.com/istvian/Proyecto-Final/tree/master/readme-content/index.png)
-![Discografía Mobile](https://github.com/istvian/Proyecto-Final/tree/master/readme-content/disco.png)
+![Página principal Mobile](https://raw.githubusercontent.com/istvian/Proyecto-Final/master/readme-content/index.png)
+![Discografía Mobile](https://raw.githubusercontent.com/istvian/Proyecto-Final/master/readme-content/disco.png)
 
 ### Consta de 5 páginas principales
 - index.html

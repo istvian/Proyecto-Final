@@ -3,12 +3,13 @@
 
 ### Este proyecto fue realizado como proyecto final para el curso de desarrollo web de CoderHouse. Visita el sitio web aqui [Aquí](https://istvian.github.io/Proyecto-Final/)
 
-### Consta de 5 páginas principales
-- index.html
-- disco.html
-- letras.html (Esta cuenta con 5 sub paginas)
-- integrantes.html
-- noticias.html
+### Consta de 5 Html principales
+- index.html --Página de inicio
+- disco.html --Página de discografía de la banda
+- letras.html (Esta cuenta con 5 sub paginas) --Letras de canciones populares
+- integrantes.html --Información de los integrantes actuales
+- noticias.html --Noticias actuales sobre la banda
+- 404.html --Página de error 404 que redirige a página principal
 
 ### Herramientas utilizadas
 - Visual Studio Code

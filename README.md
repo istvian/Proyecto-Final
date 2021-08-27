@@ -3,7 +3,7 @@
 
 ### Este proyecto fue realizado como proyecto final para el curso de desarrollo web de CoderHouse. Visita el sitio web aqui [Aquí](https://istvian.github.io/Proyecto-Final/)
 
-### Consta de 5 Html principales
+### Consta de 6 Html principales
 - index.html --Página de inicio
 - disco.html --Página de discografía de la banda
 - letras.html (Esta cuenta con 5 sub paginas) --Letras de canciones populares

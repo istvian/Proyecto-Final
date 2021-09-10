@@ -26,6 +26,7 @@
         font-size: 1.8rem;
         text-align: left;
         padding: 1rem;
+        line-height: 2.5rem;
     }
     .news__img {
         grid-area: img;
@@ -55,7 +56,7 @@
 @media (max-width: 800px) {
     .news {
         grid-template-areas: "date date""img img" "titulo titulo" "content content" "link link";
-        margin: 2rem 0;
+        margin: 3rem;
         grid-template-columns: 4fr 4fr;
         border-radius: 25px 25px 25px 25px;
         .news__img {
@@ -107,7 +108,9 @@
 
 // SECCION INTEGRANTES DE LA BANDA
 .member {
-    @include flex-h;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: flex-start;
     margin: 0 1rem;
     .member__title {
@@ -157,6 +160,7 @@
 @media (max-width: 800px) {
     .member {
         @include flex-v;
+        margin: 3rem;
         .member__container {
             grid-template-areas: "img img" "titulo date" "content content";
             border-radius: 25px 25px 25px 25px;
@@ -211,11 +215,11 @@
 // SECCION DISCOGRAFIA MOBILE
 @media (max-width: 800px) {
     .section {
+        margin: 3rem;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        margin: 0 1rem;
         .album {
             background: $color-black;
             display: grid;
@@ -258,7 +262,7 @@
         grid-template-areas: "aside letra";
         grid-template-columns: 1fr 6fr;
         height: fit-content;
-        max-width: 1200px;
+        max-width: 1000px;
         .lyrics {
             border-radius: 0px 25px 25px 0px;
             border-top: $color-text-hover solid 2px;
@@ -273,6 +277,10 @@
             .lyrics__box {
                 @include flex-v;
                 max-width: 25rem;
+                background-color: $color-link;
+                border-radius: 25px;
+                height: fit-content;
+                margin: 2rem;
                 .lyrics__title {
                     @include title;
                 }
@@ -345,6 +353,7 @@
 // PLANTILLA PAGINA LETRAS MOBILE
 @media (max-width: 800px) {
     .main {
+        margin: 3rem;
         .article {
             grid-template-areas: "aside aside" "letra letra";
             .lyrics {

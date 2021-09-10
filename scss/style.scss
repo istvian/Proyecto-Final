@@ -4,6 +4,7 @@
 @import "mixins";
 @import "footer";
 @import "sections";
+@import "modal";
 .body {
     background: #1e1e1e;
     .body__bg {
@@ -17,5 +18,55 @@
         max-height: 100vh;
         max-width: 100%;
         object-fit: cover;
+    }
+}
+
+.gallery {
+    max-width: 1700px;
+    margin: 5rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    .gallery__item {
+        background-color: $color-link;
+        height: 200px;
+        width: 400px;
+        transition: transform 0.3s;
+        margin: 0.2rem;
+        &:hover .gallery__img {
+            opacity: 15%;
+        }
+        &:hover>.gallery__text {
+            opacity: 100%;
+        }
+        &:hover {
+            transform: scale(105%);
+            z-index: 0;
+        }
+        .gallery__img {
+            opacity: 100%;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            transition: opacity 0.4s;
+        }
+        .gallery__text {
+            display: block;
+            opacity: 0%;
+            transition: opacity 0.5s;
+            position: relative;
+            top: -120px;
+            text-align: center;
+            color: $color-white;
+            font-family: $font-default;
+            font-weight: normal;
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+    .gallery__item--small {
+        height: 200px;
+        width: 200px;
     }
 }
